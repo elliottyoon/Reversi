@@ -1,11 +1,3 @@
-/*************************************************/
-/*** DO NOT CHANGE THE PUBLIC API IN THIS FILE ***/
-/*************************************************/
-//
-// You may add private members if you like, or even remove
-// the private helper functions, but you mustn't change the
-// existing public members, nor add new ones. If you do, your
-// code may not build for automated tests.
 
 #pragma once
 
@@ -21,10 +13,6 @@
 class Model
 {
 public:
-    /***************************************************/
-    /*** DON'T CHANGE ANYTHING IN THE PUBLIC SECTION ***/
-    /***************************************************/
-
     /// Model dimensions will use `int` coordinates, as board dimensions do.
     using Dimensions = Board::Dimensions;
 
@@ -102,16 +90,10 @@ public:
     void play_move(Position);
 
 #ifdef CS211_TESTING
-    // When this class is compiled for testing, members of a struct named
-    // Test_access will be allowed to access private members of this class.
     friend struct Test_access;
 #endif
 
 private:
-    //
-    // PRIVATE MEMBER VARIABLES
-    // (Don't change these!)
-    //
 
     Player turn_   = Player::dark;
     Player winner_ = Player::neither;
@@ -120,18 +102,6 @@ private:
     Move_map next_moves_;
     // INVARIANT:
     //  - `next_moves_` is always current for the state of the game.
-
-    /**********************************************/
-    /*** DO NOT CHANGE ANYTHING ABOVE THIS LINE ***/
-    /**********************************************/
-    //
-    // You may add or change anything you like below this point.
-    //
-
-    //
-    // PRIVATE HELPER FUNCTIONS
-    //
-    // Implementing these first is a very good idea.
     //
 
     /// Computes the set of positions to be flipped in direction `dir` if
