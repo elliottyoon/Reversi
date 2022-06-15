@@ -9,7 +9,6 @@ Model::Model(int size)
 Model::Model(int width, int height)
         : board_({width, height})
 {
-    // TODO: initialize `next_moves_` to `turn_`'s available moves
     compute_next_moves_();
 }
 
@@ -53,8 +52,7 @@ Model::play_move(Position pos)
         throw Client_logic_error("Model::play_move: no such move");
     }
 
-    // TODO: actually execute the move, advance the turn, refill
-    // `next_moves_`, etc.
+
     // actually execute the move
     really_play_move_(*movep);
     // advance the turn
@@ -63,16 +61,11 @@ Model::play_move(Position pos)
     compute_next_moves_();
 }
 
-//
-// BELOW ARE HELPER FUNCTIONS
-// Our tests will run on the public functions, not the helper functions
-// However, these will be extremely useful in writing the above functions
-//
+
 
 Position_set
 Model::find_flips_(Position current, Dimensions dir) const
 {
-    // TODO: HELPER FUNCTION
 
     // Create an empty position set and start adding positions to it
     // one by one as long as the position is in bounds and contains the
@@ -98,7 +91,6 @@ Model::find_flips_(Position current, Dimensions dir) const
 Position_set
 Model::evaluate_position_(Position pos) const
 {
-    // TODO: HELPER FUNCTION
 
     // possible positions
     Position_set pset = {};
@@ -119,7 +111,6 @@ Model::evaluate_position_(Position pos) const
 void
 Model::compute_next_moves_()
 {
-    // TODO: HELPER FUNCTION
     // clears out previously computed moves
     next_moves_.clear();
 
@@ -156,7 +147,6 @@ Model::compute_next_moves_()
 bool
 Model::advance_turn_()
 {
-    // TODO: HELPER FUNCTION
 
     // switch to the other player
     turn_ = other_player(turn_);
@@ -175,7 +165,6 @@ Model::advance_turn_()
 void
 Model::set_game_over_()
 {
-    // TODO: HELPER FUNCTION
     int light_tiles = 0;
     int dark_tiles = 0;
 
@@ -202,7 +191,6 @@ Model::set_game_over_()
 void
 Model::really_play_move_(Move move)
 {
-    // TODO: HELPER FUNCTION
     // sets each position gained by the move to the current player
     for (auto pos : move.second) {
         board_[pos] = turn();
