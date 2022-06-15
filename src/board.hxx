@@ -1,7 +1,3 @@
-/*******************************************/
-/*** DO NOT CHANGE ANYTHING IN THIS FILE ***/
-/*******************************************/
-
 #pragma once
 
 #include "player.hxx"
