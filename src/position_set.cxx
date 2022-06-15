@@ -1,7 +1,3 @@
-/*******************************************/
-/*** DO NOT CHANGE ANYTHING IN THIS FILE ***/
-/*******************************************/
-
 #include "position_set.hxx"
 
 Position_set::Position_set(std::initializer_list<value_type> elems)
