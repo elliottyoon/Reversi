@@ -1,7 +1,3 @@
-/*******************************************/
-/*** DO NOT CHANGE ANYTHING IN THIS FILE ***/
-/*******************************************/
-
 #pragma once
 
 #include <ge211.hxx>
@@ -257,9 +253,6 @@ private:
 };
 
 
-//
-// FREE FUNCTIONS ASSOCIATED WITH THE CLASS
-//
 
 /// Two iterators are equal when they dereference to
 /// the same position (even if they refer to different
