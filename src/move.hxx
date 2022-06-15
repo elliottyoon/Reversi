@@ -1,7 +1,3 @@
-/*******************************************/
-/*** DO NOT CHANGE ANYTHING IN THIS FILE ***/
-/*******************************************/
-
 #pragma once
 
 #include "position_set.hxx"
@@ -17,7 +13,6 @@
 ///
 ///   - second: all positions changed by the move, *including* `first`
 ///
-/// See the documentation for std::pair for details.
 using Move = std::pair<ge211::Posn<int> const, Position_set>;
 
 /// A map from move positions to their change sets.  For some key type `K` and
